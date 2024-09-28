@@ -29,7 +29,7 @@ const Sidebar = () => {
         <>
             <div className={`sidebar border-end`}>
 
-                <ul className='nav nav-pills nav-flush flex-column mb-auto '>
+                <ul className='nav nav-flush flex-column mb-auto '>
                     <li className={`nav-item `} >
                         <a href="#" className={`nav-link d-flex border-bottom  `} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" className={`bi bi-house-door  logosvg`} viewBox="0 0 16 16">
