@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 //import { useNavigate, useLocation } from 'react-router-dom';
-import '../sidebarComponent/sidebar.css'; // Import the CSS file for styling
-
+import '../sideBar/sidebar.css'
 
 const Sidebar = () => {
     const [isExpanded, setIsExpanded] = useState(false);
