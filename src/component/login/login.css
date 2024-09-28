@@ -1,0 +1,22 @@
+.image{
+    height: 200px;
+    width: 200px;
+}
+.input{
+    height: 40px;
+    width: 250px;
+}
+.custom-border {
+    border: 1px solid #7d07ac !important;
+    background-color: white;
+    color: #b106f5;
+}
+
+.custom-border:hover {
+    background-color: #b106f5;
+    color: white;
+}
+
+.border-custom {
+    border: 1pt solid #b106f5 !important;
+}
