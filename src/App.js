@@ -1,14 +1,11 @@
 import "./App.css";
-import Settings from "./component/settings/Settings";
-import Sidebar from './component/sideBar/sideBar';
+import MainComponent from "./component/main/MainComponent";
 
 function App() {
   return (
     <div className="bg-gray-100 w-full h-screen">
-      <Sidebar/>
-      <Settings />
+      <MainComponent />
     </div>
-    
   );
 }
 
