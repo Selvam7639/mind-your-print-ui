@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import OrganizationService from "../../service/OrganizationService";
+import OrganizationService from "../../../service/OrganizationService";
+import { useNavigate } from "react-router-dom";
 
 const CreateOrganization = () => {
   const [organization, setOrganization] = useState({
@@ -7,6 +8,8 @@ const CreateOrganization = () => {
     name: "",
     shortName: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -17,14 +20,21 @@ const CreateOrganization = () => {
     e.preventDefault();
     OrganizationService.saveOrganization(organization)
       .then((Response) => {
-        console.log(Response);
+        navigate("/listOrganization");
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
-  const clearOrganization = (e) => {};
+  const clearOrganization = (e) => {
+    e.preventDefault();
+    setOrganization({
+      orgId: "",
+      name: "",
+      shortName: "",
+    });
+  };
 
   return (
     <div className="flex max-w-2xl mx-auto shadow border-b bg-white my-10">

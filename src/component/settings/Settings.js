@@ -1,7 +1,7 @@
 import React from "react";
-import CreateOrganization from "./CreateOrganization";
+import CreateOrganization from "./organization/CreateOrganization";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ListOrganization from "./ListOrganization";
+import ListOrganization from "./organization/ListOrganization";
 
 const Settings = () => {
   return (
