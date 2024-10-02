@@ -11,8 +11,16 @@ class OrganizationService {
     return axios.get(BASE_URL + "/organizations");
   }
 
+  getOrganization(orgId) {
+    return axios.get(BASE_URL + "/" + orgId);
+  }
+
   deleteOrganization(orgId) {
     return axios.delete(BASE_URL + "/" + orgId);
+  }
+
+  updateOrganization(organization, orgId) {
+    return axios.put(BASE_URL + "/" + orgId, organization);
   }
 }
 

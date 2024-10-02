@@ -2,6 +2,7 @@ import React from "react";
 import CreateOrganization from "./organization/CreateOrganization";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ListOrganization from "./organization/ListOrganization";
+import EditOrganization from "./organization/EditOrganization";
 
 const Settings = () => {
   return (
@@ -19,6 +20,7 @@ const Settings = () => {
         <Route path="/settings" element={<ListOrganization />} />
         <Route path="/listOrganization" element={<ListOrganization />} />
         <Route path="/createOrganization" element={<CreateOrganization />} />
+        <Route path="/editOrganization/:orgId" element={<EditOrganization />} />
       </Routes>
     </BrowserRouter>
   );

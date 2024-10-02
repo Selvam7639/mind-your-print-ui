@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Organization = ({ organization, deleteOrganization }) => {
+  const navigate = useNavigate();
+
+  const editOrganization = (e, orgId) => {
+    e.preventDefault();
+    navigate(`/editOrganization/${orgId}`);
+  };
+
   return (
     <tr key={organization.orgId}>
       <td className="text-center px-6 py-4 whitespace-nowrap">
@@ -13,7 +21,11 @@ const Organization = ({ organization, deleteOrganization }) => {
         <a href="#" className="text-blue-600 hover:text-blue-800 px-4">
           View
         </a>
-        <a href="#" className="text-orange-600 hover:text-orange-800 px-4">
+        <a
+          onClick={(e, orgId) => editOrganization(e, organization.orgId)}
+          href="#"
+          className="text-orange-600 hover:text-orange-800 px-4"
+        >
           Edit
         </a>
         <a
