@@ -1,10 +1,10 @@
 import "./App.css";
-import MainComponent from "./component/main/MainComponent";
+import RouterComponent from "./component/router/routerComponent";
 
 function App() {
   return (
-    <div className="bg-gray-100 w-full h-screen">
-      <MainComponent />
+    <div>
+      <RouterComponent />
     </div>
   );
 }

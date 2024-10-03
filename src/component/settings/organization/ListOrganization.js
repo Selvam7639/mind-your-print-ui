@@ -6,7 +6,7 @@ import Organization from "./Organization";
 const ListOrganization = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [organizations, setOrganizations] = useState();
+  const [organizations, setOrganizations] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
